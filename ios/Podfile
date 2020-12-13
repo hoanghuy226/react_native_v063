@@ -8,6 +8,8 @@ target 'react_native_v063' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-randombytes', :path => '../node_modules/react-native-randombytes'
+
   target 'react_native_v063Tests' do
     inherit! :complete
     # Pods for testing
