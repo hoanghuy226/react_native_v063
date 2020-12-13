@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "dev": "watchman watch-del-all && react-native start --reset-cache",
+    "postinstall": "npx pod-install ios",
+    "shim": "./node_modules/.bin/rn-nodeify --hack --install",
+    "clean": "rm -rf node_modules/ && rm -rf ios/Pods/"
   },
   "dependencies": {
     "react": "16.13.1",
